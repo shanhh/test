@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		var objStr = "username=shanhaohui&pwd=13";
+		var obj = {};
+		//使用slipt分隔字符串成数组
+		//使用对象接收
+		objStr.split("&").map(function(item){
+			var arr = split("=");
+			obj[arr[0]] = arr[1];
+		});	
+		console.log(obj)
+
+	</script>
+</html>
