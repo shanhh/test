@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+
+		//Array.form(arr) 是es6将伪数组转换成数组 
+		//es5是[].slice.call(arr) 或者是 Array.prototype.slice.call(arr);
+
+		//set 一种数据结构
+		function dedupe(array){
+			return Array.from(new Set(array));
+		}
+		dedupe([12, 12, 11, 1, "1"]);
+		
+	</script>
+</html>
