@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<button>点击</button>
+	</body>
+	<script type="text/javascript">
+		// localStorage 与 cookie的比较
+		// 1、大小 localStorage储存空间是5M, cookie是4k;
+		// 2、cookie每一次请求新的页面的时候都会发送过去，无形中浪费了带宽;
+		// cookie的作用是与服务器进行数据交互的,而localStorage是本地储存数据的
+
+		// localStorage和sessionStorage的区别
+		// localStorage用于持久的本地储存，除非自己手动删除，否则数据永远都不会过期;
+		// sessionStorage只在一个会话页面中才会存在,关闭浏览器后就会消失
+		// 共同点:ie8以上才支持(ie还有useData),储存的值的类型是字符串,如果储存的内容过多的话,会消耗内存,导致页面性能下降;不支持跨域
+
+
+		// localStorage封装的方法有setItem,getItem,removeItem,clear等方法;
+		// 使用前先判断浏览器是否支持这个属性
+		/*if(!window.localStorage){
+			return false;
+		}else{
+			// 主要业务逻辑
+		}*/
+		// setItem方法
+		var btn = document.querySelector("button");
+		btn.onclick = function(){
+			var storage = window.localStorage;
+			// 点方法
+			storage.a = 1;
+			// []的方法
+			storage["b"] = 2;
+			// setItem的方法
+			storage.setItem("c", 3);
+		}
+		// 读取数据还可以用点、[]的方法，还可以用getItem;
+		// '改'重新赋值; 删除某一个用removeItem("c")里面写键名
+		// 清空用clear(); 可以在控制台上输出了
+	</script>
+</html>
